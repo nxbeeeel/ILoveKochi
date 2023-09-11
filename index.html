@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect"  href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    
+    
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I LOVE KOCHI</title>
+    <link rel="stylesheet"   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- HERO-SECTION -->
+
+    <header>
+      <nav class="nav">
+        <div class="logo">
+          <div class="flex-col">
+            <div class="flex">
+            <h1>I </h1>
+            <h1 class="love">LOVE</h1>
+          </div>
+            <h1>KOCHI</h1>
+          </div>
+        </div>
+        <div class="menu">
+          <a href="#"> Home</a>
+          <a href="#"> Gallary</a>
+          <a href="#"> About</a>
+          <a href="#"> Contact</a>
+        </div>
+      </nav>
+      
+      <main class="main-container" id="header">
+        <!-- <img class="bgimg" src="images/background/bgimg1.jpg" alt="" /> -->
+        <section class="main-content">
+          <h3>Welcome To Kochi</h3>
+          <h1>DO COME AND VISIT <span class="change-content" ></span></h1>
+          <p>
+            "Where history whispers through the backwaters and the present
+            dances with spices in the air.""
+          </p>
+          <a href="#" class="btnone"> Learn More</a>
+          <a href="#" class="btntwo"> Do check this</a>
+        </section>
+      </main>
+    </header>
+  </body>
+ 
+  <script>
+    
+    function changeBg(){
+      const images = [
+        
+        'url("images/background/bgimg1.jpg")', 
+        'url("images/background/bgimg2.jpg")', 
+        'url("images/background/bgimg4.jpg")',
+        'url("images/background/bgimg5.jpg")', 
+        'url("images/background/bgimg1.jpg")', 
+        'url("images/background/bgimg2.jpg")', 
+        'url("images/background/bgimg4.jpg")',
+        'url("images/background/bgimg5.jpg")',
+        // 'url("images/background/bgimg2.jpg")',
+        // 'url("images/background/bgimg3.jpg")',
+        // 'url("images/background/bgimg3.jpg")',
+        // 'url("images/background/bgimg3.jpg")',
+        // 'url("images/background/bgimg3.jpg")',
+      ]
+      const section = document.getElementById('header')
+      const bg = images[Math.floor(Math.random() * images.length)];
+      console.log(bg)
+      section.style.backgroundImage = bg ;
+
+    }
+    setInterval(changeBg,1500)
+
+  </script>
+  </div>
+</html>
